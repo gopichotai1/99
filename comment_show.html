@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+<title></title>
+    <meta charset="UTF-8">
+    <title>  </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<center>
+
+<table id="tbl">
+	<h2>Comments</h2>
+
+        <br><br><br>
+        {% for user in users %}
+
+
+            <p>File Name:  {{ user[0] }}</p><br>
+            <p>User Name: {{ user[1] }}</p><br>			
+			<p>Video Category:  {{ user[2] }}</p>
+
+     
+        {% endfor %}
+
+        {% for res in reg %}
+			<p>Email:{{ res[0] }}</p>
+        {% endfor %}        <br><br><br>
+
+        {% for Comments in comment %}
+        <tr>
+			<p>comments:&nbsp;&nbsp;&nbsp;{{ Comments[0] }}</p>
+        {% endfor %}
+        <br><br><br>
+
+
+
+</table>
+</center>
+<br><br><br>
+
+
+</div>
+
+</body>
+</html>

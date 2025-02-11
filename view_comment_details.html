@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+<title></title>
+    <meta charset="UTF-8">
+    <title>  </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<center>
+<table>
+	<h2>Comments</h2>
+    <table border="1%">
+	
+					
+			
+			<th>Regstration Id</th>
+			<th>Comment Text</th>
+			
+        {% for user in users %}
+        <tr>
+			<th>{{ user[2] }}</th>
+			
+            <td>{{ user[4] }}</td>
+        </tr>
+        {% endfor %}
+	
+</table>
+</center>
+</div>
+
+</body>
+</html>
